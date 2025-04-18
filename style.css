@@ -1,3 +1,20 @@
+@font-face {
+    font-family: 'Myfont';
+    src: url(./assets/fonts/static/Inconsolata-Bold.ttf) format(truetype);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Myfont';
+    src: url(./assets/fonts/static/Inconsolata-ExtraBold.ttf);
+    font-weight: bolder;
+}
+
+@font-face {
+    font-family: 'Myfont';
+    src: url(./assets/fonts/static/Inconsolata-Regular.ttf);
+    font-weight: normal;
+}
 * {
     margin: 0;
     padding: 0;
@@ -41,6 +58,8 @@ body {
 .logo-div p {
     font-size: 1.4rem;
     color: hsl(252, 6%, 83%);
+    font-family: 'Myfont';
+    font-weight: bold;
 }
 
 .wrapper {
@@ -73,13 +92,17 @@ h1 {
     /* border: 2px solid red; */
     line-height: 4;
     /* margin-bottom: 5rem; */
-    color: hsl(0, 0%, 100%) ;
+    color: hsl(0, 0%, 100%);
+    font-family: 'Myfont';
+    font-weight: bolder;
 }
 
 header p {
     font-size: 1.5rem;
     word-spacing: .5rem;
     color: hsl(245, 15%, 58%);
+    font-family: 'Myfont';
+    font-weight: bold;
 }
 
 .div_upload-section {
@@ -92,6 +115,8 @@ header p {
 .div_upload-section {
     font-size: 1.5rem;
     color: hsl(252, 6%, 83%);
+    font-family: 'Myfont';
+    font-weight: normal;
 }
 
 .div_image-upload {
@@ -115,6 +140,8 @@ header p {
 .div_image-upload p {
     font-size: 1.5rem;
     color: hsl(252, 6%, 83%);
+    font-family: 'Myfont';
+    font-weight: normal;
 }
 
 .div_image-checkbox {
@@ -161,6 +188,8 @@ form {
     font-size: 1.5rem;
     /* border: 2px solid greenyellow ; */
     color: hsl(0, 0%, 100%);
+    font-family: 'Myfont';
+    font-weight: normal;
 }
 
 
@@ -185,4 +214,6 @@ button {
     background-color: hsl(7, 88%, 67%);
     border: none;
     color: hsl(248, 70%, 10%);
+    font-family: 'Myfont';
+    font-weight: bolder;
 }
