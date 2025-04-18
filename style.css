@@ -9,6 +9,11 @@ html {
 }
 
 body {
+    background-color: hsl(248, 70%, 10%);
+    background-image: url(./assets/images/pattern-circle.svg), url(./assets/images/pattern-lines.svg), url(./assets/images/pattern-squiggly-line-bottom-desktop.svg), url(./assets/images/pattern-squiggly-line-top.svg);
+    background-position: center right, top, bottom left, top right;
+    background-repeat: no-repeat, repeat-x, no-repeat, no-repeat;  
+    background-size: 10%, 80%, 65% 45%, 30%;
     /* display: flex; */
     /* align-items: center; */
     /* justify-content: center; */
@@ -20,15 +25,22 @@ body {
 
 .logo-div {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     justify-content: center;
     align-items: center;
+    padding-block-start: 2rem;
     /* border: 2px dotted green ; */
     
 }
 
+.logo-div img {
+    display: inline-block;
+    width: 2rem;
+}
+
 .logo-div p {
     font-size: 1.4rem;
+    color: hsl(252, 6%, 83%);
 }
 
 .wrapper {
@@ -54,18 +66,20 @@ header {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     /* width: 95%; */
     text-align: center;
     word-spacing: 1rem;
     /* border: 2px solid red; */
     line-height: 4;
     /* margin-bottom: 5rem; */
+    color: hsl(0, 0%, 100%) ;
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     word-spacing: .5rem;
+    color: hsl(245, 15%, 58%);
 }
 
 .div_upload-section {
@@ -74,14 +88,33 @@ header p {
     flex-direction: column;
     gap: 1rem;
 }
+
+.div_upload-section {
+    font-size: 1.5rem;
+    color: hsl(252, 6%, 83%);
+}
+
 .div_image-upload {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border: 1px dashed hsl(245, 15%, 58%);
+    background-color: hsla(245, 19%, 35%,0.3);
     padding-block: 2rem;
     border-radius: 5px;
+}
+
+.div_image-upload img {
+ display: inline-block;
+ background-color: hsla(245, 19%, 35%, 0.5);
+ padding: .8rem;
+ border-radius: 10px;   
+}
+
+.div_image-upload p {
+    font-size: 1.5rem;
+    color: hsl(252, 6%, 83%);
 }
 
 .div_image-checkbox {
@@ -89,6 +122,30 @@ header p {
     gap: .4rem;
     /* justify-content: center; */
     align-items: center;
+}
+
+.custom-checkbox input {
+    display: none;
+}
+
+.custom-checkbox span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: hsla(245, 19%, 35%, 0.2);
+    border: 2px solid hsl(245, 19%, 35%);
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.custom-checkbox input:checked + span {
+    background-color: green;
+} 
+.div_image-checkbox label {
+    font-size: 1.2rem;
+    color: hsl(245, 19%, 35%);
 }
 
 img {
@@ -101,8 +158,9 @@ form {
     flex-direction: column;
     gap: 2rem;
     margin-top: 3rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     /* border: 2px solid greenyellow ; */
+    color: hsl(0, 0%, 100%);
 }
 
 
@@ -111,6 +169,7 @@ form input {
     padding: 1rem;
     border-radius: 5px;
     border: 1px solid hsl(245, 15%, 58%);
+    background-color: hsla(245, 19%, 35%,0.3);
 }
 
 .form-input {
@@ -125,4 +184,5 @@ button {
     border-radius: 5px;
     background-color: hsl(7, 88%, 67%);
     border: none;
+    color: hsl(248, 70%, 10%);
 }
