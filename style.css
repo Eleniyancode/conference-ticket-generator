@@ -216,4 +216,5 @@ button {
     color: hsl(248, 70%, 10%);
     font-family: 'Myfont';
     font-weight: bolder;
+    font-size: 1.5rem;
 }
