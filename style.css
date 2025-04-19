@@ -222,6 +222,69 @@ button {
   font-size: 1.5rem;
 }
 
+@media (max-width: 600px) {
+  html {
+    font-size: 42%;
+  }
+
+  body {
+    background-image: url(./assets/images/pattern-circle.svg),
+      url(./assets/images/pattern-lines.svg),
+      url(./assets/images/pattern-squiggly-line-bottom-desktop.svg),
+      url(./assets/images/pattern-squiggly-line-top.svg),
+      url(./assets/images/background-mobile.png);
+    background-position: center right, top, bottom left, top right,
+      center bottom;
+    background-repeat: no-repeat, repeat-x, no-repeat, no-repeat, no-repeat;
+    background-size: 10%, 80%, 50% 45%, 30%, 100%;
+  }
+
+  .wrapper {
+    width: 100%;
+  }
+
+  header {
+    border: 2px solid red;
+    width: 95%;
+    margin-block-start: 5rem;
+    padding: 0.5rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+    word-spacing: 0.5rem;
+  }
+
+  header p {
+    font-size: 2.5rem;
+    text-align: center;
+    word-spacing: 0.2rem;
+    width: 80%;
+    line-height: 1.2;
+  }
+
+  .div_upload-section {
+    width: 90%;
+  }
+
+  .div_upload-section {
+    font-size: 2rem;
+  }
+
+  .div_image-upload p {
+    font-size: 2rem;
+  }
+
+  .div_image-checkbox label {
+    font-size: 1.5rem;
+  }
+
+  form {
+    width: 90%;
+    font-size: 2rem;
+  }
+}
+
 @media (max-width: 375px) {
   html {
     font-size: 37.5%;
