@@ -125,6 +125,10 @@ header p {
     font-weight: normal;
 } */
 
+#dropArea.dragover {
+  border-color: #333;
+  background-color: #f0f0f0;
+}
 .div_image-upload {
   display: flex;
   flex-direction: column;
@@ -203,6 +207,7 @@ form input {
   border-radius: 5px;
   border: 1px solid hsl(245, 15%, 58%);
   background-color: hsla(245, 19%, 35%, 0.3);
+  color: hsl(252, 6%, 83%);
 }
 
 .form-input {
@@ -345,5 +350,67 @@ button {
   form {
     width: 90%;
     font-size: 2rem;
+  }
+
+  .successMessage-h1 {
+    margin-block: 5rem;
+  }
+
+  .successMessage-p {
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: "myFont";
+    font-weight: bold;
+    color: hsl(245, 15%, 58%);
+    padding-inline: 4rem;
+    margin-block-end: 10rem;
+  }
+
+  .ticket {
+    background-image: url(./assets/images/pattern-ticket.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-inline: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .ticket-address,
+  .ticket-info {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+
+  .ticket-address-p1,
+  .ticket-info-p1 {
+    font-size: clamp(1rem, 5vw, 3rem);
+    font-family: "myFont";
+    font-weight: bold;
+    color: white;
+    border: 2px dotted green;
+    padding: 0;
+  }
+
+  .ticket-address-p2,
+  .ticket-info-p2 {
+    font-size: clamp(1rem, 5vw, 2rem);
+    font-family: "myFont";
+    font-weight: normal;
+    color: hsl(245, 15%, 58%);
+  }
+  .ticket-address img {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+  }
+
+  .ticket-info img {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
   }
 }
