@@ -107,6 +107,16 @@ header p {
   font-weight: bold;
 }
 
+#applicant-fullName {
+  background: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#applicant-email {
+  color: hsl(7, 71%, 60%);
+}
+
 .div_upload-section {
   width: 30%;
   display: flex;

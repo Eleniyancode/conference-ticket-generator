@@ -39,7 +39,7 @@
           <p>Drag and drop or click to upload</p>
           <input type="file" id="imageInput" accept="image/*" hidden />
         </div>
-        <div class="div_image-checkbox">
+        <div class="div_image-checkbox" id="image-checkbox">
           <label class="custom-checkbox" id="errorImageUpload">
             <input type="checkbox" />
             <span></span>Upload your photo (JPG or PNG, max size: 500KB).
@@ -101,7 +101,11 @@
         </div>
 
         <div class="ticket-info">
-          <img src="./assets/images/image-avatar.jpg" alt="image-avatar" />
+          <img
+            id="ticketImage"
+            src="./assets/images/image-avatar.jpg"
+            alt="image-avatar"
+          />
           <div>
             <p class="ticket-info-p1">
               <span id="applicant-name">Jonathan Kristof</span>
