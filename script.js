@@ -8,8 +8,17 @@ const applicantName = document.getElementById("applicant-name");
 const applicantGithubName = document.getElementById("applicant-githubname");
 const applicantEmail = document.getElementById("applicant-email");
 const applicantFullName = document.getElementById("applicant-fullName");
-const errorImageUpload = document.getElementById("errorImageUpload");
+let errorImageUpload = document.getElementById("errorImageUpload");
 const ticketImage = document.getElementById("ticketImage");
+
+let formHasError = false;
+
+//reloading the page when the form trow an error
+function reloadPage(formHasError) {
+  if (!formHasError) {
+    location.reload();
+  }
+}
 
 //handling the drag, drop and click section upload image
 const dropArea = document.getElementById("dropArea");
@@ -50,12 +59,19 @@ function handleFile(file) {
   if (!file.type.startsWith("image/")) {
     errorImageUpload.textContent = "Please upload a valid image file";
     errorImageUpload.style.color = "red";
+    preview.src = "./assets/images/icon-upload.svg";
+    // reloadPage(formHasError);
   } else if (file.size > maxSize) {
-    errorImageUpload.textContent = "File must be less than 500KB";
+    preview.src = "./assets/images/icon-upload.svg";
+    errorImageUpload.textContent =
+      "File too large, please upload a photo under 500KB";
   } else {
+    errorImageUpload.textContent = "";
     const reader = new FileReader();
     reader.onload = () => {
       preview.src = reader.result;
+      preview.style.width = "50px";
+      preview.style.height = "50px";
       ticketImage.src = reader.result;
     };
     reader.readAsDataURL(file);
@@ -83,21 +99,27 @@ myForm.addEventListener("submit", function (event) {
   // check for proper image upload or if image is upload at all
   const imageInput = document.getElementById("imageInput");
   const errorImageUpload = document.getElementById("errorImageUpload");
-  const imageCheckbox = document.getElementById("image-checkbox");
+  const dropArea = document.getElementById("dropArea");
   console.log(imageInput.files.length);
-  if (imageInput.files.length === 0) {
-    errorImageUpload.textContent = "";
-  } else {
-    errorImageUpload.textContent = "Please upload an image";
-    errorImageUpload.style.color = "red";
-    imageCheckbox.style.borderBlockColor = "red";
-    return;
-  }
+  // if (imageInput.files.length === 0) {
+  //   errorImageUpload.textContent = "";
+  // } else {
+  //   errorImageUpload.textContent = "Please upload an image";
+  //   errorImageUpload.style.color = "red";
+  //   dropArea.style.borderBlockColor = "red";
+  //   dropArea.style.borderInlineColor = "red";
+  //   return;
+  // }
 
   //validation the form fields
   if (fullNameInput.value === "") {
     fullNameErrorMessage.textContent = "All fields are required";
     fullNameErrorMessage.style.color = "red";
+  } else if (imageInput.files.length === 0) {
+    errorImageUpload.textContent = "Please upload an image";
+    errorImageUpload.style.color = "red";
+    dropArea.style.borderBlockColor = "red";
+    dropArea.style.borderInlineColor = "red";
   } else if (emailInput.value === "") {
     emailErrorMessage.textContent = "All fields are required";
     emailErrorMessage.style.color = "red";

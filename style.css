@@ -41,6 +41,7 @@ body {
   max-width: 168rem;
   /* border: 2px dotted green; */
   flex-direction: column;
+  padding: 4rem;
 }
 
 .logo-div {
@@ -66,13 +67,13 @@ body {
 
 .wrapper {
   margin: 0 auto;
-  width: 70%;
+  width: 90%;
   max-width: 168rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* border: 2px dotted green; */
+  border: 2px dotted green;
 }
 
 header {
@@ -88,7 +89,8 @@ header {
 
 h1 {
   font-size: 4rem;
-  /* width: 95%; */
+  width: 65%;
+  margin: 0 auto;
   text-align: center;
   word-spacing: 1rem;
   /* border: 2px solid red; */
@@ -101,10 +103,14 @@ h1 {
 
 header p {
   font-size: 1.5rem;
+  width: 55%;
   word-spacing: 0.5rem;
   color: hsl(245, 15%, 58%);
   font-family: "Myfont";
   font-weight: bold;
+  margin: 0 auto;
+  text-align: center;
+  /* border: 2px dotted red; */
 }
 
 #applicant-fullName {
@@ -220,6 +226,13 @@ form input {
   color: hsl(252, 6%, 83%);
 }
 
+form input:focus,
+#imageInput:focus {
+  border: 2px solid hsl(245, 15%, 58%);
+  outline: none;
+  background-color: hsla(245, 19%, 35%, 0.3);
+}
+
 .form-input {
   display: flex;
   flex-direction: column;
@@ -235,6 +248,86 @@ button {
   font-family: "Myfont";
   font-weight: bolder;
   font-size: 1.5rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: hsla(7, 88%, 67%, 0.6);
+}
+
+.successMessage-h1 {
+  margin-block: 3rem;
+  padding: 1rem;
+}
+
+.successMessage-p {
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: "myFont";
+  font-weight: bold;
+  color: hsl(245, 15%, 58%);
+  padding-inline: 4rem;
+  margin-block-end: 5rem;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.successMessage-p span {
+  display: inline-block;
+}
+
+.ticket {
+  background-image: url(./assets/images/pattern-ticket.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* border: 2px dotted red; */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 6rem;
+  width: 40%;
+  height: 300px;
+  padding: 4rem;
+  margin-top: 4rem;
+}
+
+.ticket-address,
+.ticket-info {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.ticket-address-p1,
+.ticket-info-p1 {
+  font-size: 3rem;
+  font-family: "myFont";
+  font-weight: bold;
+  color: white;
+  /* border: 2px dotted green; */
+  padding: 0;
+}
+
+.ticket-address-p2,
+.ticket-info-p2 {
+  font-size: clamp(1rem, 5vw, 2rem);
+  font-family: "myFont";
+  font-weight: normal;
+  color: hsl(245, 15%, 58%);
+}
+.ticket-address img {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.ticket-info img {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
 }
 
 @media (max-width: 600px) {
@@ -298,6 +391,77 @@ button {
     width: 90%;
     font-size: 2rem;
   }
+
+  .successMessage-h1 {
+    margin-block: 5rem;
+    padding: 1rem;
+  }
+
+  .successMessage-p {
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: "myFont";
+    font-weight: bold;
+    color: hsl(245, 15%, 58%);
+    padding-inline: 4rem;
+    margin-block-end: 5rem;
+  }
+
+  .successMessage-p span {
+    display: inline-block;
+  }
+
+  .ticket {
+    background-image: url(./assets/images/pattern-ticket.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 2px dotted red;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 6rem;
+    width: 90%;
+    padding: 4rem;
+  }
+
+  .ticket-address,
+  .ticket-info {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    /* justify-content: center; */
+  }
+
+  .ticket-address-p1,
+  .ticket-info-p1 {
+    font-size: clamp(1rem, 5vw, 6rem);
+    font-family: "myFont";
+    font-weight: bold;
+    color: white;
+    /* border: 2px dotted green; */
+    padding: 0;
+  }
+
+  .ticket-address-p2,
+  .ticket-info-p2 {
+    font-size: clamp(1rem, 5vw, 2rem);
+    font-family: "myFont";
+    font-weight: normal;
+    color: hsl(245, 15%, 58%);
+  }
+  .ticket-address img {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+  }
+
+  .ticket-info img {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+  }
 }
 
 @media (max-width: 375px) {
@@ -315,6 +479,7 @@ button {
       center bottom;
     background-repeat: no-repeat, repeat-x, no-repeat, no-repeat, no-repeat;
     background-size: 10%, 80%, 50% 45%, 30%, 100%;
+    padding: 6rem;
   }
 
   .wrapper {
@@ -364,6 +529,7 @@ button {
 
   .successMessage-h1 {
     margin-block: 5rem;
+    padding: 1rem;
   }
 
   .successMessage-p {
@@ -373,30 +539,38 @@ button {
     font-weight: bold;
     color: hsl(245, 15%, 58%);
     padding-inline: 4rem;
-    margin-block-end: 10rem;
+    margin-block-end: 5rem;
+  }
+
+  .successMessage-p span {
+    display: inline-block;
   }
 
   .ticket {
     background-image: url(./assets/images/pattern-ticket.svg);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    margin-inline: 2rem;
+    border: 2px dotted red;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    padding: 2rem;
-    gap: 2rem;
+    padding: 1rem;
+    gap: 6rem;
+    width: 90%;
+    /* padding: 4rem; */
   }
 
   .ticket-address,
   .ticket-info {
     display: flex;
     gap: 2rem;
-    align-items: flex-start;
+    align-items: center;
+    /* justify-content: center; */
   }
 
   .ticket-address-p1,
   .ticket-info-p1 {
-    font-size: clamp(1rem, 5vw, 3rem);
+    font-size: clamp(1rem, 6vw, 6rem);
     font-family: "myFont";
     font-weight: bold;
     color: white;
