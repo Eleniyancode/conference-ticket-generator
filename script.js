@@ -24,6 +24,7 @@ function reloadPage(formHasError) {
 const dropArea = document.getElementById("dropArea");
 const imageInput = document.getElementById("imageInput");
 const preview = document.getElementById("preview");
+const dragAndDropIn = document.getElementById("drag-drop-instruction");
 
 dropArea.addEventListener("click", () => imageInput.click());
 
@@ -67,6 +68,7 @@ function handleFile(file) {
       "File too large, please upload a photo under 500KB";
   } else {
     errorImageUpload.textContent = "";
+    dragAndDropIn.textContent = "";
     const reader = new FileReader();
     reader.onload = () => {
       preview.src = reader.result;

@@ -633,7 +633,7 @@ button:hover {
     font-family: "myFont";
     font-weight: bold;
     color: white;
-    border: 2px dotted green;
+    /* border: 2px dotted green; */
     padding: 0;
   }
 
