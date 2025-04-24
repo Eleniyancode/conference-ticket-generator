@@ -42,6 +42,7 @@ body {
   /* border: 2px dotted green; */
   flex-direction: column;
   padding: 4rem;
+  position: relative;
 }
 
 .logo-div {
@@ -398,7 +399,7 @@ button:hover {
   }
 
   header {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     width: 95%;
     margin-block-start: 5rem;
     padding: 0.5rem;
@@ -442,7 +443,7 @@ button:hover {
   .successMessage-h1 {
     margin-block: 5rem;
     padding: 1rem;
-    border: 2px solid red;
+    /* border: 2px solid red; */
   }
 
   .successMessage-p {
@@ -453,7 +454,7 @@ button:hover {
     color: hsl(245, 15%, 58%);
     padding-inline: 4rem;
     margin-block-end: 5rem;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     width: 90%;
   }
 
