@@ -46,20 +46,21 @@ body {
 
 .logo-div {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   justify-content: center;
   align-items: center;
   padding-block-start: 2rem;
+  margin-top: 3rem;
   /* border: 2px dotted green ; */
 }
 
 .logo-div img {
   display: inline-block;
-  width: 2rem;
+  width: 5rem;
 }
 
 .logo-div p {
-  font-size: 1.4rem;
+  font-size: 4rem;
   color: hsl(252, 6%, 83%);
   font-family: "Myfont";
   font-weight: bold;
@@ -268,7 +269,7 @@ button:hover {
   color: hsl(245, 15%, 58%);
   padding-inline: 4rem;
   margin-block-end: 5rem;
-  width: 50%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -277,25 +278,43 @@ button:hover {
 }
 
 .ticket {
-  background-image: url(./assets/images/pattern-ticket.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
   /* border: 2px dotted red; */
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  gap: 6rem;
-  width: 40%;
-  height: 300px;
-  padding: 4rem;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  padding: 3rem;
+  /* gap: 6rem; */
+  width: 100%;
+  max-width: 600px;
+  /* height: 300px; */
+  /* padding: 4rem; */
   margin-top: 4rem;
+  position: relative;
+}
+
+.ticket-image {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ticket-content {
+  position: absolute;
+  top: 70px;
+  left: 50px;
+}
+
+.ticket-address {
+  margin-bottom: 4rem;
 }
 
 .ticket-address,
 .ticket-info {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
   align-items: center;
   /* justify-content: center; */
 }
@@ -330,6 +349,21 @@ button:hover {
   border-radius: 5px;
 }
 
+.ticket-num-div {
+  transform: rotate(270deg);
+  position: absolute;
+  top: 50%;
+  right: 40px;
+}
+
+.ticket-num {
+  font-size: 3rem;
+  font-family: "myFont";
+  font-weight: normal;
+  /* color: hsl(245, 19%, 35%); */
+  color: hsl(245, 15%, 58%);
+}
+
 @media (max-width: 600px) {
   html {
     font-size: 42%;
@@ -351,8 +385,20 @@ button:hover {
     width: 100%;
   }
 
+  .logo-div {
+    margin-top: 3rem;
+  }
+
+  .logo-div img {
+    width: 5rem;
+  }
+
+  .logo-div p {
+    font-size: 4rem;
+  }
+
   header {
-    /* border: 2px solid red; */
+    border: 2px solid red;
     width: 95%;
     margin-block-start: 5rem;
     padding: 0.5rem;
@@ -361,6 +407,7 @@ button:hover {
   h1 {
     font-size: 4rem;
     word-spacing: 0.5rem;
+    width: 90%;
   }
 
   header p {
@@ -395,6 +442,7 @@ button:hover {
   .successMessage-h1 {
     margin-block: 5rem;
     padding: 1rem;
+    border: 2px solid red;
   }
 
   .successMessage-p {
@@ -405,13 +453,15 @@ button:hover {
     color: hsl(245, 15%, 58%);
     padding-inline: 4rem;
     margin-block-end: 5rem;
+    border: 2px solid red;
+    width: 90%;
   }
 
   .successMessage-p span {
     display: inline-block;
   }
 
-  .ticket {
+  /* .ticket {
     background-image: url(./assets/images/pattern-ticket.svg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -423,7 +473,7 @@ button:hover {
     gap: 6rem;
     width: 90%;
     padding: 4rem;
-  }
+  } */
 
   .ticket-address,
   .ticket-info {
@@ -461,6 +511,11 @@ button:hover {
     width: 40px;
     height: 40px;
     border-radius: 5px;
+  }
+
+  .ticket-content {
+    left: 40px;
+    top: 40px;
   }
 }
 
@@ -538,7 +593,7 @@ button:hover {
     font-family: "myFont";
     font-weight: bold;
     color: hsl(245, 15%, 58%);
-    padding-inline: 4rem;
+    padding-inline: 2rem;
     margin-block-end: 5rem;
   }
 
@@ -546,7 +601,7 @@ button:hover {
     display: inline-block;
   }
 
-  .ticket {
+  /* .ticket {
     background-image: url(./assets/images/pattern-ticket.svg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -557,9 +612,12 @@ button:hover {
     padding: 1rem;
     gap: 6rem;
     width: 90%;
-    /* padding: 4rem; */
-  }
+    padding: 4rem;
+  } */
 
+  .ticket-address {
+    margin-bottom: 3rem;
+  }
   .ticket-address,
   .ticket-info {
     display: flex;
@@ -570,7 +628,7 @@ button:hover {
 
   .ticket-address-p1,
   .ticket-info-p1 {
-    font-size: clamp(1rem, 6vw, 6rem);
+    font-size: 2.5rem;
     font-family: "myFont";
     font-weight: bold;
     color: white;
@@ -580,7 +638,7 @@ button:hover {
 
   .ticket-address-p2,
   .ticket-info-p2 {
-    font-size: clamp(1rem, 5vw, 2rem);
+    font-size: 1.5rem;
     font-family: "myFont";
     font-weight: normal;
     color: hsl(245, 15%, 58%);
@@ -596,5 +654,14 @@ button:hover {
     width: 40px;
     height: 40px;
     border-radius: 5px;
+  }
+
+  .ticket-content {
+    top: 40px;
+    left: 40px;
+  }
+
+  .ticket-num-div {
+    right: 20px;
   }
 }
